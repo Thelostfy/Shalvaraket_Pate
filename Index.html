@@ -10,32 +10,67 @@
 </head>
 
 <body>
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Choose your city
-    </button>
+
+
+    <nav class="navbar bg-light navbar-expand-md sticky-top">
+        <div class="container-fluid">
+
+            <a class="navbar-brand position-absolute start-50 translate-middle-x" href="#">
+                <img src="Images/Untitled-1.png" alt="" width="200">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ourNavbar"
+                aria-controls="ourNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div id="ourNavbar" class="collapse navbar-collapse">
+                <button type="button" class="btn btn-secondary mt" data-bs-toggle="modal"
+                    data-bs-target="#SelectModal">
+                    Choose your city
+                </button>
+            </div>
+        </div>
+    </nav>
+
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="SelectModal" tabindex="-1" aria-labelledby="SelectModallLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">City Selection Form</h1>
+                    <h1 class="modal-title fs-5" id="SelectModallLabel">City Selection Form</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form id="citySelectForm">
                     <div class="modal-body">
 
-                        <label for="userCityInput" class="form-label">City</label>
-                        <input type="text" id="userCityInput" class="form-control" required
-                            placeholder="Please write your city to English...">
+                        <select class="form-select" id="userChoosen" aria-label="Default select example">
+                            <option disabled selected>
+                                Select a city from the menu...
+                            </option>
+                            <option value="Tehran">Tehran - تهران</option>
+                            <option value="Isfahan">Isfahan - اصفهان</option>
+                            <option value="Sabzevar">Sabzevar - سبزوار</option>
+                            <option value="Mashhad">Mashhad - مشهد</option>
+                            <option value="Kashan">Kashan - کاشان</option>
+                            <option value="Pardis">pardis - پردیس</option>
+                        </select>
+
 
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <button type="submit" class="btn btn-primary">Done</button>
                     </div>
                 </form>
             </div>
+        </div>
+    </div>
+
+
+    <div id="MainImage" class="d-flex justify-content-center align-items-center vh-100">
+        <div class="p-3  text-center" style="width: 400px;" id="bgImage">
+
         </div>
     </div>
 
