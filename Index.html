@@ -1,82 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chi Pate</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="Style.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="Style.css" />
+  </head>
 
-<body>
-
-
+  <body>
     <nav class="navbar bg-light navbar-expand-md sticky-top">
-        <div class="container-fluid">
+      <div class="container-fluid">
+        <a
+          class="navbar-brand position-absolute start-50 translate-middle-x"
+          href="#"
+        >
+          <img src="Images/Untitled-1.png" alt="" width="200" />
+        </a>
 
-            <a class="navbar-brand position-absolute start-50 translate-middle-x" href="#">
-                <img src="Images/Untitled-1.png" alt="" width="200">
-            </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#ourNavbar"
+          aria-controls="ourNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ourNavbar"
-                aria-controls="ourNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div id="ourNavbar" class="collapse navbar-collapse">
-                <button type="button" class="btn btn-secondary mt" data-bs-toggle="modal"
-                    data-bs-target="#SelectModal">
-                    Choose your city
-                </button>
-            </div>
+        <div id="ourNavbar" class="collapse navbar-collapse">
+          <button
+            type="button"
+            class="btn btn-secondary mt"
+            data-bs-toggle="modal"
+            data-bs-target="#SelectModal"
+          >
+            Choose your city
+          </button>
         </div>
+      </div>
     </nav>
 
-
     <!-- Modal -->
-    <div class="modal fade" id="SelectModal" tabindex="-1" aria-labelledby="SelectModallLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="SelectModallLabel">City Selection Form</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <form id="citySelectForm">
-                    <div class="modal-body">
-
-                        <select class="form-select" id="userChoosen" aria-label="Default select example">
-                            <option disabled selected>
-                                Select a city from the menu...
-                            </option>
-                            <option value="Tehran">Tehran - تهران</option>
-                            <option value="Isfahan">Isfahan - اصفهان</option>
-                            <option value="Sabzevar">Sabzevar - سبزوار</option>
-                            <option value="Mashhad">Mashhad - مشهد</option>
-                            <option value="Kashan">Kashan - کاشان</option>
-                            <option value="Pardis">pardis - پردیس</option>
-                        </select>
-
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Done</button>
-                    </div>
-                </form>
+    <div
+      class="modal fade"
+      id="SelectModal"
+      tabindex="-1"
+      aria-labelledby="SelectModallLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="SelectModallLabel">
+              City Selection Form
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <form id="citySelectForm">
+            <div class="modal-body">
+              <select
+                class="form-select"
+                id="userChoosen"
+                aria-label="Default select example"
+              >
+                <option disabled selected>
+                  Select a city from the menu...
+                </option>
+                <option value="Tehran">Tehran - تهران</option>
+                <option value="Isfahan">Isfahan - اصفهان</option>
+                <option value="Sabzevar">Sabzevar - سبزوار</option>
+                <option value="Mashhad">Mashhad - مشهد</option>
+                <option value="Kashan">Kashan - کاشان</option>
+                <option value="Pardis">pardis - پردیس</option>
+              </select>
             </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary">Done</button>
+            </div>
+          </form>
         </div>
+      </div>
     </div>
 
-
-    <div id="MainImage" class="d-flex justify-content-center align-items-center vh-100">
-        <div class="p-3  text-center" style="width: 400px;" id="bgImage">
-
-        </div>
+    <div
+      id="MainImage"
+      class="d-flex justify-content-center align-items-center vh-100"
+    >
+      <div class="p-3 text-center" style="width: 400px" id="bgImage"></div>
     </div>
 
-
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="main.js"></script>
     <script src="app.js"></script>
-</body>
-
+  </body>
 </html>

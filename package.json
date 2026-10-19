@@ -14,10 +14,20 @@
   "author": "",
   "type": "commonjs",
   "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+
+"scripts": {
+
+    "dev": "vite",
+
+    "build": "vite build",
+
+    "preview": "vite preview"
+
   },
   "dependencies": {
     "bootstrap": "^5.3.8"
+  },
+  "devDependencies": {
+    "vite": "^8.3.4"
   }
 }
