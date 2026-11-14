@@ -46,7 +46,7 @@ let getCityData = async function () {
             <br>
             <span> <b>Wind speed: </b> ${data2.current.wind_speed_10m} K/m</span>
 
-            <img src="Images/yes.png" class="img-fluid" alt="">`;
+            <img src="images/yes.png" class="img-fluid" alt="">`;
     } else {
       MainDiv.setAttribute("style", "background-color: #f2e1c9;");
       bgImageDiv.innerHTML = `
@@ -56,7 +56,7 @@ let getCityData = async function () {
             <br>
             <span> <b>Wind speed: </b> ${data2.current.wind_speed_10m} K/m</span>
 
-            <img src="Images/no.png" class="img-fluid" alt="">`;
+            <img src="images/no.png" class="img-fluid" alt="">`;
     }
   } catch (error) {
     console.error("خطا در پردازش شهر ", error);
@@ -68,3 +68,17 @@ citySelectForm.addEventListener("submit", (event) => {
   getCityData();
   myModalAlternative.hide();
 });
+
+document.getElementById("theme_change").onclick = function () {
+  if ((document.body.style.backgroundColor = "#000")) {
+    document.body.style.backgroundColor = "#f5deb3";
+    document.getElementsByTagName("a")[0].style.color = "#000";
+    document.getElementsByTagName("a")[0].style.borderColor = "#000";
+    document.getElementById("theme_change").innerText = "Light Theme";
+  } else if ((document.body.style.backgroundColor = "#f5deb3")) {
+    document.body.style.backgroundColor = "#000";
+    document.getElementsByTagName("a")[0].style.color = "#f5deb3";
+    document.getElementsByTagName("a")[0].style.borderColor = "#f5deb3";
+    document.getElementById("theme_change").innerText = "Dark Theme";
+  }
+};
